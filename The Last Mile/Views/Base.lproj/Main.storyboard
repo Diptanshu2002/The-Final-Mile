@@ -20,7 +20,6 @@
                     <connections>
                         <segue destination="v6u-4k-Led" kind="relationship" relationship="viewControllers" id="Wxv-nT-itI"/>
                         <segue destination="lPX-S0-9uY" kind="relationship" relationship="viewControllers" id="Y6L-Wa-WWD"/>
-                        <segue destination="3B6-Is-ZcA" kind="relationship" relationship="viewControllers" id="dXG-bl-jeA"/>
                         <segue destination="BpY-SG-UAz" kind="relationship" relationship="viewControllers" id="iWE-oM-uBK"/>
                     </connections>
                 </tabBarController>
@@ -62,23 +61,6 @@
             </objects>
             <point key="canvasLocation" x="694" y="125"/>
         </scene>
-        <!--Local Shops-->
-        <scene sceneID="KyQ-19-aET">
-            <objects>
-                <navigationController id="3B6-Is-ZcA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Local Shops" image="fork.knife" catalog="system" id="Uqy-Mi-4IH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ld8-Ss-x1t">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="9Qw-Ed-pMv" kind="relationship" relationship="rootViewController" id="2jJ-Rp-60n"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Df6-fk-Ryl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1528" y="123"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="zpW-06-O0A">
             <objects>
@@ -117,22 +99,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0n-jD-KYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-187" y="932"/>
-        </scene>
-        <!--ShopsVC-->
-        <scene sceneID="Z2a-cn-8TB">
-            <objects>
-                <viewController id="9Qw-Ed-pMv" customClass="ShopsVC" customModule="The_Last_Mile" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ujI-LB-dIt">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ISo-jz-Oq6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2cN-GM-o3v"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EnE-2Q-24L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1527" y="942"/>
         </scene>
         <!--DeliveryVC-->
         <scene sceneID="UNv-Bv-aEg">
@@ -264,7 +230,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profileImage" width="512" height="512"/>
