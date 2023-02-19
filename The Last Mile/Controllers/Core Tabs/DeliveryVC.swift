@@ -8,12 +8,32 @@
 import UIKit
 
 class DeliveryVC: UIViewController {
-
+    
+    
+    @IBOutlet weak var requestView:UIView!
+    @IBOutlet weak var acceptView:UIView!
+    
+    
+    @IBAction func switchViews(_ sender:UISegmentedControl){
+        if sender.selectedSegmentIndex == 0{
+            requestView.alpha = 1
+            acceptView.alpha = 0
+        }
+        else{
+            requestView.alpha = 0
+            acceptView.alpha = 1
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = .systemBackground
+//        navigationController?.navigationBar.topItem?.title = "Delivery"
+//        navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

@@ -11,6 +11,8 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = "Home"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Do any additional setup after loading the view.
     }

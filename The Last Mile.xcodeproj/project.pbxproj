@@ -15,7 +15,7 @@
 		F050758E29952FB000CB1012 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758D29952FB000CB1012 /* HomeVC.swift */; };
 		F05075902995302400CB1012 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758F2995302400CB1012 /* ProfileVC.swift */; };
 		F05075922995309300CB1012 /* DeliveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05075912995309300CB1012 /* DeliveryVC.swift */; };
-		F0507595299530B000CB1012 /* ShopsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0507594299530B000CB1012 /* ShopsVC.swift */; };
+		F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */; };
 		F0E0D792299776880031D133 /* AddressCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */; };
 		F0E0D793299776880031D133 /* AddressCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E0D791299776880031D133 /* AddressCustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		F050758D29952FB000CB1012 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F050758F2995302400CB1012 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F05075912995309300CB1012 /* DeliveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryVC.swift; sourceTree = "<group>"; };
-		F0507594299530B000CB1012 /* ShopsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsVC.swift; sourceTree = "<group>"; };
+		F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCustomTableViewCell.swift; sourceTree = "<group>"; };
 		F0E0D791299776880031D133 /* AddressCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +108,6 @@
 				F050758D29952FB000CB1012 /* HomeVC.swift */,
 				F050758F2995302400CB1012 /* ProfileVC.swift */,
 				F05075912995309300CB1012 /* DeliveryVC.swift */,
-				F0507594299530B000CB1012 /* ShopsVC.swift */,
 			);
 			path = "Core Tabs";
 			sourceTree = "<group>";
@@ -118,6 +117,7 @@
 			children = (
 				F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */,
 				F0E0D791299776880031D133 /* AddressCustomTableViewCell.xib */,
+				F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */,
 			);
 			path = "Custom cells";
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05075902995302400CB1012 /* ProfileVC.swift in Sources */,
-				F0507595299530B000CB1012 /* ShopsVC.swift in Sources */,
+				F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */,
 				F050758E29952FB000CB1012 /* HomeVC.swift in Sources */,
 				F001BAED298BBF8C00FF2DC3 /* AppDelegate.swift in Sources */,
 				F05075922995309300CB1012 /* DeliveryVC.swift in Sources */,
