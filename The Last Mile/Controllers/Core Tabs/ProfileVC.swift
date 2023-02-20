@@ -6,14 +6,25 @@ class ProfileVC: UIViewController{
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
+    struct Profile_Setting{
+        var title: String
+        var icon: UIImage
+    }
+    
+    var settings: [Profile_Setting] = [
+        Profile_Setting(title: "Address", icon: UIImage(systemName: "location.circle.fill")!),
+        Profile_Setting(title: "Orders", icon: UIImage(systemName: "bag.circle.fill")!)
+    
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.title = "Profile"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
-
-        tableView.delegate = self
         tableView.dataSource = self
-        self.registerTableViewCells()
+        tableView.delegate = self
         
         styling()
     }
@@ -30,83 +41,26 @@ class ProfileVC: UIViewController{
         imageNameView.layer.shadowOffset = .zero
         imageNameView.layer.shadowRadius = 2
         imageNameView.backgroundColor = .systemGray6
-        
-        
+            
     }
-    
-    private func registerTableViewCells() {
-        let textFieldCell = UINib(nibName: "AddressCustomTableViewCell",
-                                  bundle: nil)
-        tableView.register(textFieldCell,
-                                forCellReuseIdentifier: "addressCell")
-    }
-    
 }
 
-
-
-extension ProfileVC : UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0{
-            return "Options"
-        }
-        else{
-            return "Addresses"
-        }
-    }
-    
-    
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
-        let sectionView = (view as? UITableViewHeaderFooterView)
-        sectionView?.textLabel?.textColor = .red
-        sectionView?.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you selected \(indexPath.row)")
-    }
-    
-
-    
-}
-
-
-
-
-
-extension ProfileVC :UITableViewDataSource{
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-        
-    }
-    
+extension ProfileVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return settings.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath)
+        let profileCell = cell as? ProfileTableViewCell
+        profileCell?.profileCellIcon?.image = settings[indexPath.row].icon
+        profileCell?.profileCellLable?.text = settings[indexPath.row].title
         
-        if indexPath.section == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Detailcell", for: indexPath)
-            cell.textLabel?.text = "Text"
-            cell.accessoryType = .detailButton
-            return cell
-        }
-        
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addressCell", for: indexPath)
-            return cell
-        }
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+    }
     
 }
