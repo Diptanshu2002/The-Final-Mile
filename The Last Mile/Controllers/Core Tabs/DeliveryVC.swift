@@ -18,32 +18,46 @@ class DeliveryVC: UIViewController {
         if sender.selectedSegmentIndex == 0{
             requestView.alpha = 1
             acceptView.alpha = 0
+            
+            navigationController?.navigationBar.topItem?.title = "Request"
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .add,
+                target: self,
+                action: #selector(addRequest)
+            )
+            
         }
         else{
             requestView.alpha = 0
             acceptView.alpha = 1
+            navigationController?.navigationBar.topItem?.title = "Assist"
+            navigationItem.rightBarButtonItem = nil
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemBackground
-//        navigationController?.navigationBar.topItem?.title = "Delivery"
-//        navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.topItem?.title = "Request"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addRequest)
+        )
     }
     
-    
-    
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DeliveryVC {
+    
+    @objc public func addRequest(){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AddRequestViewController") as? AddRequestViewController {
+                self.present(vc, animated: true)
+            }
     }
-    */
-
+    
 }

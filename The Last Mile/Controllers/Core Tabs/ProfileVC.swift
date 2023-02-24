@@ -12,9 +12,11 @@ class ProfileVC: UIViewController{
     }
     
     var settings: [Profile_Setting] = [
-        Profile_Setting(title: "Address", icon: UIImage(systemName: "location.circle.fill")!),
-        Profile_Setting(title: "Orders", icon: UIImage(systemName: "bag.circle.fill")!)
-    
+        Profile_Setting(title: "Address", icon: UIImage(named: "address")!),
+        Profile_Setting(title: "My Request", icon: UIImage(named: "shop")!),
+        Profile_Setting(title: "My Deliveries", icon: UIImage(named: "myDelivery")!),
+        
+        Profile_Setting(title: "Log Out", icon: UIImage(named: "logout")!)
     ]
     
 
@@ -46,21 +48,31 @@ class ProfileVC: UIViewController{
 }
 
 extension ProfileVC: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    //MARK: Creating number of section as number of setting.count
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return settings.count
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profile_cell", for: indexPath)
         let profileCell = cell as? ProfileTableViewCell
-        profileCell?.profileCellIcon?.image = settings[indexPath.row].icon
-        profileCell?.profileCellLable?.text = settings[indexPath.row].title
+        profileCell?.profileCellIcon?.image = settings[indexPath.section].icon
+        profileCell?.profileCellLable?.text = settings[indexPath.section].title
         
         return cell
     }
     
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        print(indexPath.section)
     }
     
 }
