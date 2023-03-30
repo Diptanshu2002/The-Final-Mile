@@ -1,24 +1,24 @@
 //
-//  ProfileTableViewCell.swift
+//  LeaderBoardTableViewCell.swift
 //  The Last Mile
 //
-//  Created by Diptanshu Mandal on 19/02/23.
+//  Created by Aakriti Rawat on 24/02/23.
 //
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var profileCellIcon: UIImageView!
-    @IBOutlet weak var profileCellLable: UILabel!
+class LeaderBoardTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var medalImage: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var creditsLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        profileCellIcon.tintColor = .systemRed
     }
-    
-    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

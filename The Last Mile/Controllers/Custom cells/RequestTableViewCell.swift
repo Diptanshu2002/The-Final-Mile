@@ -16,6 +16,11 @@ class RequestTableViewCell: UITableViewCell {
         requestCellImage.layer.masksToBounds = true
         requestCellImage.layer.cornerRadius = requestCellImage.frame.height / 2
         
+        //new lines added.
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 8.0
+        self.backgroundColor = .secondarySystemBackground
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

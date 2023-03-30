@@ -9,7 +9,7 @@ import UIKit
 
 class AcceptTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var pickUpTitleLabel: UILabel!
+//    @IBOutlet weak var pickUpTitleLabel: UILabel!
     @IBOutlet weak var pickUpLocationLabel: UILabel!
     @IBOutlet weak var dropTitleLabel: UILabel!
     @IBOutlet weak var dropLocationTitleLabel: UILabel!
@@ -18,6 +18,9 @@ class AcceptTableViewCell: UITableViewCell {
     @IBOutlet weak var coinImage: UIImageView!
     
     @IBOutlet weak var deliveryPartnerImage: UIImageView!
+    
+    
+    
     
     
 

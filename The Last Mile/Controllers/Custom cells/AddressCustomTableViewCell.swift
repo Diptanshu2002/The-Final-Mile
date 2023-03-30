@@ -9,24 +9,23 @@ import UIKit
 
 class AddressCustomTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var addressDistance: UILabel!
+    
     @IBOutlet weak var addressType: UILabel!
     @IBOutlet weak var fullAddress: UILabel!
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-        
-        
-        addressType.text  = "Earth"
-        fullAddress.text = "Hello from world"
+//        fullAddress.lineBreakMode = .byCharWrapping
+        fullAddress.numberOfLines = 0
     }
     
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
         
 }

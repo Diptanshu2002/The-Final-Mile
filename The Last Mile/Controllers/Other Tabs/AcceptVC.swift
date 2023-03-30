@@ -1,9 +1,11 @@
 
 import UIKit
 
-class AcceptViewController: UIViewController {
+class AcceptVC: UIViewController {
     
     @IBOutlet weak var acceptTableView: UITableView!
+    
+    let deliveryDetails = DataManagar.shared.getBulletin()
     
 
     override func viewDidLoad() {
@@ -18,10 +20,13 @@ class AcceptViewController: UIViewController {
 }
 
 
-extension AcceptViewController: UITableViewDelegate, UITableViewDataSource{
+
+
+
+extension AcceptVC: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return deliveryDetails.count
     }
     
     
@@ -36,12 +41,12 @@ extension AcceptViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "accept_cell", for: indexPath)
         let accept_Cell = cell as? AcceptTableViewCell
         
-        accept_Cell?.dropTitleLabel.text = "Drop In"
-        accept_Cell?.dropLocationTitleLabel.text = "Sannasi-C 404"
-        accept_Cell?.pickUpTitleLabel.text = "Pick Up"
-        accept_Cell?.pickUpLocationLabel.text = "SRM Arch Gate"
-        accept_Cell?.totalCoinWillEarnLabel.text = "20"
-        accept_Cell?.deliveryPartnerImage.image = UIImage(named: "zomato")
+        accept_Cell?.dropTitleLabel.text = "Pick Up"
+        accept_Cell?.dropLocationTitleLabel.text = deliveryDetails[indexPath.section].request.pickupPoint
+
+        accept_Cell?.pickUpLocationLabel.text = deliveryDetails[indexPath.section].request.name
+        accept_Cell?.totalCoinWillEarnLabel.text = "20 Miles"
+        accept_Cell?.deliveryPartnerImage.image = UIImage(named: "profileImage")
         
         return cell
     }
@@ -61,7 +66,8 @@ extension AcceptViewController: UITableViewDelegate, UITableViewDataSource{
         print(indexPath.section)
         print(indexPath.row)
         
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "AcceptDetailViewController") as? AcceptDetailViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AcceptDetailViewController") as? AcceptDetailVC {
+            vc.details = deliveryDetails[indexPath.section]
             self.navigationController?.pushViewController(vc, animated: true)
 //            self.present(vc, animated: true)
             }

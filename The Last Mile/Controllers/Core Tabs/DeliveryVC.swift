@@ -6,58 +6,60 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class DeliveryVC: UIViewController {
     
-    
-    @IBOutlet weak var requestView:UIView!
     @IBOutlet weak var acceptView:UIView!
-    
-    
-    @IBAction func switchViews(_ sender:UISegmentedControl){
-        if sender.selectedSegmentIndex == 0{
-            requestView.alpha = 1
-            acceptView.alpha = 0
-            
-            navigationController?.navigationBar.topItem?.title = "Request"
-            
-            navigationItem.rightBarButtonItem = UIBarButtonItem(
-                barButtonSystemItem: .add,
-                target: self,
-                action: #selector(addRequest)
-            )
-            
-        }
-        else{
-            requestView.alpha = 0
-            acceptView.alpha = 1
-            navigationController?.navigationBar.topItem?.title = "Assist"
-            navigationItem.rightBarButtonItem = nil
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.topItem?.title = "Request"
+        navigationController?.navigationBar.topItem?.title = "Bulletin"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .add,
-            target: self,
-            action: #selector(addRequest)
-        )
+        DataManagar.GetUserDetailsFromDatabase {
+            
+        } OnError: { error in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
+        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        DataManagar.GetUserDetailsFromDatabase {
+            
+        } OnError: { error in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
+        }
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        handleNotAuthenticated()
+    }
 }
 
 
-extension DeliveryVC {
-    
-    @objc public func addRequest(){
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "AddRequestViewController") as? AddRequestViewController {
-                self.present(vc, animated: true)
-            }
+
+extension DeliveryVC{
+    func handleNotAuthenticated(){
+//        if Auth.auth().currentUser == nil{
+//            // show login screen
+//            let loginVC = LoginViewController()
+//            loginVC.modalPresentationStyle = .fullScreen
+//            present(loginVC, animated: false)
+//        }
+        
+        if Auth.auth().currentUser == nil{
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "LoginSignUpVC") as? LoginSignUpVC {
+                vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: false)
+                }
+        }
+        
     }
-    
 }

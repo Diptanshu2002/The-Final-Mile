@@ -7,27 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81E81507A7DC2D090A74A8C2 /* Pods_The_Last_Mile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4701AEF1D918CC26C77CECEF /* Pods_The_Last_Mile.framework */; };
 		F001BAED298BBF8C00FF2DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001BAEC298BBF8C00FF2DC3 /* AppDelegate.swift */; };
 		F001BAEF298BBF8C00FF2DC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001BAEE298BBF8C00FF2DC3 /* SceneDelegate.swift */; };
 		F001BAF4298BBF8C00FF2DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F001BAF2298BBF8C00FF2DC3 /* Main.storyboard */; };
 		F001BAF6298BBF8D00FF2DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F001BAF5298BBF8D00FF2DC3 /* Assets.xcassets */; };
 		F001BAF9298BBF8D00FF2DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F001BAF7298BBF8D00FF2DC3 /* LaunchScreen.storyboard */; };
-		F0022F3C29A74C9900A62B25 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0022F3B29A74C9900A62B25 /* RequestViewController.swift */; };
+		F0022F3C29A74C9900A62B25 /* RequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0022F3B29A74C9900A62B25 /* RequestVC.swift */; };
 		F0022F3E29A755F000A62B25 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0022F3D29A755F000A62B25 /* RequestTableViewCell.swift */; };
 		F0022F4029A7C63400A62B25 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */; };
-		F0103FE629A3CC6400C2B6A4 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0103FE529A3CC6400C2B6A4 /* AddressViewController.swift */; };
+		F004C6B129CB85B900FA4A5F /* testingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004C6B029CB85B900FA4A5F /* testingViewController.swift */; };
+		F0103FE629A3CC6400C2B6A4 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */; };
+		F030921829B061DE00690CD6 /* OngoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F030921729B061DE00690CD6 /* OngoingViewController.swift */; };
+		F047D36D29D1DFD00059F597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36C29D1DFD00059F597 /* LoginVC.swift */; };
+		F047D36F29D1FA610059F597 /* LoginSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */; };
+		F047D37129D1FAEF0059F597 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D37029D1FAEF0059F597 /* SignUpVC.swift */; };
 		F050758E29952FB000CB1012 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758D29952FB000CB1012 /* HomeVC.swift */; };
 		F05075902995302400CB1012 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758F2995302400CB1012 /* ProfileVC.swift */; };
 		F05075922995309300CB1012 /* DeliveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05075912995309300CB1012 /* DeliveryVC.swift */; };
-		F06BF37229A4BAF300549B0C /* AcceptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06BF37129A4BAF300549B0C /* AcceptDetailViewController.swift */; };
+		F06BF37229A4BAF300549B0C /* AcceptDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */; };
+		F08D8A7929B7620D00C952D1 /* AddAddressMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */; };
 		F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */; };
 		F09F738129A28EC00010A137 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F738029A28EC00010A137 /* DataModel.swift */; };
+		F0AA720C29D2D1AD000968A3 /* service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA720B29D2D1AD000968A3 /* service.swift */; };
+		F0AA720F29D313BD000968A3 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AA720E29D313BD000968A3 /* AuthManager.swift */; };
+		F0AA721129D326C9000968A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AA721029D326C9000968A3 /* GoogleService-Info.plist */; };
+		F0CA24CF29C32F160058B3FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA24CE29C32F160058B3FA /* DataManager.swift */; };
+		F0CA24D129C3AC5B0058B3FA /* AddAddressFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */; };
 		F0E0D792299776880031D133 /* AddressCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */; };
-		F0F0D8AC29A341E900B2602E /* AcceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0D8AB29A341E900B2602E /* AcceptViewController.swift */; };
+		F0E5FB5D29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5FB5C29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift */; };
+		F0F0D8AC29A341E900B2602E /* AcceptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0D8AB29A341E900B2602E /* AcceptVC.swift */; };
 		F0F0D8AE29A344D300B2602E /* AcceptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0D8AD29A344D300B2602E /* AcceptTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4701AEF1D918CC26C77CECEF /* Pods_The_Last_Mile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Last_Mile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6962495AE2F5FB3D95ABF082 /* Pods-The Last Mile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Last Mile.debug.xcconfig"; path = "Target Support Files/Pods-The Last Mile/Pods-The Last Mile.debug.xcconfig"; sourceTree = "<group>"; };
+		6985A9E7316D252680C975F1 /* Pods-The Last Mile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Last Mile.release.xcconfig"; path = "Target Support Files/Pods-The Last Mile/Pods-The Last Mile.release.xcconfig"; sourceTree = "<group>"; };
 		F001BAE9298BBF8C00FF2DC3 /* The Last Mile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Last Mile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F001BAEC298BBF8C00FF2DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F001BAEE298BBF8C00FF2DC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,18 +51,30 @@
 		F001BAF5298BBF8D00FF2DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F001BAF8298BBF8D00FF2DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F001BAFA298BBF8D00FF2DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F0022F3B29A74C9900A62B25 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		F0022F3B29A74C9900A62B25 /* RequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVC.swift; sourceTree = "<group>"; };
 		F0022F3D29A755F000A62B25 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
 		F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
-		F0103FE529A3CC6400C2B6A4 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
+		F004C6B029CB85B900FA4A5F /* testingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testingViewController.swift; sourceTree = "<group>"; };
+		F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
+		F030921729B061DE00690CD6 /* OngoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingViewController.swift; sourceTree = "<group>"; };
+		F047D36C29D1DFD00059F597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpVC.swift; sourceTree = "<group>"; };
+		F047D37029D1FAEF0059F597 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		F050758D29952FB000CB1012 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F050758F2995302400CB1012 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F05075912995309300CB1012 /* DeliveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryVC.swift; sourceTree = "<group>"; };
-		F06BF37129A4BAF300549B0C /* AcceptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptDetailViewController.swift; sourceTree = "<group>"; };
+		F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptDetailVC.swift; sourceTree = "<group>"; };
+		F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressMapVC.swift; sourceTree = "<group>"; };
 		F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F09F738029A28EC00010A137 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F0AA720B29D2D1AD000968A3 /* service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = service.swift; sourceTree = "<group>"; };
+		F0AA720E29D313BD000968A3 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		F0AA721029D326C9000968A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0CA24CE29C32F160058B3FA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressFormVC.swift; sourceTree = "<group>"; };
 		F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCustomTableViewCell.swift; sourceTree = "<group>"; };
-		F0F0D8AB29A341E900B2602E /* AcceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptViewController.swift; sourceTree = "<group>"; };
+		F0E5FB5C29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewCell.swift; sourceTree = "<group>"; };
+		F0F0D8AB29A341E900B2602E /* AcceptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptVC.swift; sourceTree = "<group>"; };
 		F0F0D8AD29A344D300B2602E /* AcceptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,17 +83,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E81507A7DC2D090A74A8C2 /* Pods_The_Last_Mile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8471CEDEF021EAA3BC1405C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6962495AE2F5FB3D95ABF082 /* Pods-The Last Mile.debug.xcconfig */,
+				6985A9E7316D252680C975F1 /* Pods-The Last Mile.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C85FC6C8E7D6608B4F88B9B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4701AEF1D918CC26C77CECEF /* Pods_The_Last_Mile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F001BAE0298BBF8C00FF2DC3 = {
 			isa = PBXGroup;
 			children = (
 				F001BAEB298BBF8C00FF2DC3 /* The Last Mile */,
 				F001BAEA298BBF8C00FF2DC3 /* Products */,
+				8471CEDEF021EAA3BC1405C1 /* Pods */,
+				C85FC6C8E7D6608B4F88B9B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,13 +128,28 @@
 		F001BAEB298BBF8C00FF2DC3 /* The Last Mile */ = {
 			isa = PBXGroup;
 			children = (
+				F0AA720D29D313A6000968A3 /* Auth */,
+				F004C6B029CB85B900FA4A5F /* testingViewController.swift */,
+				F0CA24CE29C32F160058B3FA /* DataManager.swift */,
+				F09F738029A28EC00010A137 /* DataModel.swift */,
 				F050758B29952F4100CB1012 /* Controllers */,
 				F050758A29952F3600CB1012 /* Resources */,
 				F050758929952F1300CB1012 /* Views */,
 				F001BAFA298BBF8D00FF2DC3 /* Info.plist */,
-				F09F738029A28EC00010A137 /* DataModel.swift */,
+				F0AA721029D326C9000968A3 /* GoogleService-Info.plist */,
 			);
 			path = "The Last Mile";
+			sourceTree = "<group>";
+		};
+		F047D36B29D1DE230059F597 /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				F047D36C29D1DFD00059F597 /* LoginVC.swift */,
+				F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */,
+				F047D37029D1FAEF0059F597 /* SignUpVC.swift */,
+				F0AA720B29D2D1AD000968A3 /* service.swift */,
+			);
+			path = LoginSignup;
 			sourceTree = "<group>";
 		};
 		F050758929952F1300CB1012 /* Views */ = {
@@ -111,6 +174,7 @@
 		F050758B29952F4100CB1012 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F047D36B29D1DE230059F597 /* LoginSignup */,
 				F0F0D8AA29A341B200B2602E /* Other Tabs */,
 				F0E0D78F299776530031D133 /* Custom cells */,
 				F050758C29952F8100CB1012 /* Core Tabs */,
@@ -121,6 +185,7 @@
 		F050758C29952F8100CB1012 /* Core Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				F0022F3B29A74C9900A62B25 /* RequestVC.swift */,
 				F050758D29952FB000CB1012 /* HomeVC.swift */,
 				F050758F2995302400CB1012 /* ProfileVC.swift */,
 				F05075912995309300CB1012 /* DeliveryVC.swift */,
@@ -128,10 +193,19 @@
 			path = "Core Tabs";
 			sourceTree = "<group>";
 		};
+		F0AA720D29D313A6000968A3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA720E29D313BD000968A3 /* AuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		F0E0D78F299776530031D133 /* Custom cells */ = {
 			isa = PBXGroup;
 			children = (
 				F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */,
+				F0E5FB5C29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift */,
 				F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */,
 				F0F0D8AD29A344D300B2602E /* AcceptTableViewCell.swift */,
 				F0022F3D29A755F000A62B25 /* RequestTableViewCell.swift */,
@@ -142,11 +216,13 @@
 		F0F0D8AA29A341B200B2602E /* Other Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				F0F0D8AB29A341E900B2602E /* AcceptViewController.swift */,
-				F0103FE529A3CC6400C2B6A4 /* AddressViewController.swift */,
-				F06BF37129A4BAF300549B0C /* AcceptDetailViewController.swift */,
-				F0022F3B29A74C9900A62B25 /* RequestViewController.swift */,
+				F0F0D8AB29A341E900B2602E /* AcceptVC.swift */,
+				F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */,
 				F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */,
+				F030921729B061DE00690CD6 /* OngoingViewController.swift */,
+				F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */,
+				F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */,
+				F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */,
 			);
 			path = "Other Tabs";
 			sourceTree = "<group>";
@@ -158,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F001BAFD298BBF8D00FF2DC3 /* Build configuration list for PBXNativeTarget "The Last Mile" */;
 			buildPhases = (
+				4A6DAEC6CCED608E1AD4E4AD /* [CP] Check Pods Manifest.lock */,
 				F001BAE5298BBF8C00FF2DC3 /* Sources */,
 				F001BAE6298BBF8C00FF2DC3 /* Frameworks */,
 				F001BAE7298BBF8C00FF2DC3 /* Resources */,
+				543A48C7B0608E10BBDA1EA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,29 +290,83 @@
 				F001BAF9298BBF8D00FF2DC3 /* LaunchScreen.storyboard in Resources */,
 				F001BAF6298BBF8D00FF2DC3 /* Assets.xcassets in Resources */,
 				F001BAF4298BBF8C00FF2DC3 /* Main.storyboard in Resources */,
+				F0AA721129D326C9000968A3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A6DAEC6CCED608E1AD4E4AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-The Last Mile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543A48C7B0608E10BBDA1EA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Last Mile/Pods-The Last Mile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-The Last Mile/Pods-The Last Mile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-The Last Mile/Pods-The Last Mile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F001BAE5298BBF8C00FF2DC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F047D36D29D1DFD00059F597 /* LoginVC.swift in Sources */,
 				F05075902995302400CB1012 /* ProfileVC.swift in Sources */,
+				F0E5FB5D29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift in Sources */,
+				F0AA720F29D313BD000968A3 /* AuthManager.swift in Sources */,
 				F0022F3E29A755F000A62B25 /* RequestTableViewCell.swift in Sources */,
-				F0022F3C29A74C9900A62B25 /* RequestViewController.swift in Sources */,
+				F0022F3C29A74C9900A62B25 /* RequestVC.swift in Sources */,
 				F0022F4029A7C63400A62B25 /* AddRequestViewController.swift in Sources */,
+				F004C6B129CB85B900FA4A5F /* testingViewController.swift in Sources */,
+				F0CA24D129C3AC5B0058B3FA /* AddAddressFormVC.swift in Sources */,
+				F047D36F29D1FA610059F597 /* LoginSignUpVC.swift in Sources */,
 				F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */,
-				F0F0D8AC29A341E900B2602E /* AcceptViewController.swift in Sources */,
+				F08D8A7929B7620D00C952D1 /* AddAddressMapVC.swift in Sources */,
+				F0F0D8AC29A341E900B2602E /* AcceptVC.swift in Sources */,
 				F050758E29952FB000CB1012 /* HomeVC.swift in Sources */,
 				F001BAED298BBF8C00FF2DC3 /* AppDelegate.swift in Sources */,
+				F0AA720C29D2D1AD000968A3 /* service.swift in Sources */,
 				F0F0D8AE29A344D300B2602E /* AcceptTableViewCell.swift in Sources */,
 				F05075922995309300CB1012 /* DeliveryVC.swift in Sources */,
+				F047D37129D1FAEF0059F597 /* SignUpVC.swift in Sources */,
+				F030921829B061DE00690CD6 /* OngoingViewController.swift in Sources */,
 				F09F738129A28EC00010A137 /* DataModel.swift in Sources */,
-				F06BF37229A4BAF300549B0C /* AcceptDetailViewController.swift in Sources */,
-				F0103FE629A3CC6400C2B6A4 /* AddressViewController.swift in Sources */,
+				F0CA24CF29C32F160058B3FA /* DataManager.swift in Sources */,
+				F06BF37229A4BAF300549B0C /* AcceptDetailVC.swift in Sources */,
+				F0103FE629A3CC6400C2B6A4 /* AddressVC.swift in Sources */,
 				F0E0D792299776880031D133 /* AddressCustomTableViewCell.swift in Sources */,
 				F001BAEF298BBF8C00FF2DC3 /* SceneDelegate.swift in Sources */,
 			);
@@ -312,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -378,18 +510,22 @@
 		};
 		F001BAFE298BBF8D00FF2DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6962495AE2F5FB3D95ABF082 /* Pods-The Last Mile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2MW2SYN3RD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Last Mile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,18 +541,21 @@
 		};
 		F001BAFF298BBF8D00FF2DC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6985A9E7316D252680C975F1 /* Pods-The Last Mile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2MW2SYN3RD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The Last Mile/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
