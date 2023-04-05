@@ -62,4 +62,5 @@ enum RequestStatus: String {
 struct Delivery {
     var request: Request
     var deliveryPersonName: String
+    var timestamp : Double
 }

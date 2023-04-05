@@ -24,7 +24,8 @@ class AcceptDetailVC: UIViewController {
             time: "",
             packageSize: ""
         ),
-        deliveryPersonName: ""
+        deliveryPersonName: "",
+        timestamp: Double()
     )
     
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TD6-RD-HAi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TD6-RD-HAi">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -209,7 +209,7 @@ Final Mile</string>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-0b-FMX">
-                                <rect key="frame" x="-2" y="59" width="393" height="44"/>
+                                <rect key="frame" x="-3" y="59" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
@@ -902,13 +902,13 @@ Final Mile</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipl-in-HLc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="uOb-cy-SVy"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFU-j7-0zz">
-                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM0-0q-net">
                                         <rect key="frame" x="8" y="23" width="0.0" height="0.0"/>
@@ -918,7 +918,7 @@ Final Mile</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delivery Partner" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-zS-8Gq">
-                                        <rect key="frame" x="8" y="162.33333333333334" width="377" height="44"/>
+                                        <rect key="frame" x="8" y="177.33333333333331" width="377" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="p5Z-J6-hpe"/>
                                         </constraints>
@@ -926,7 +926,7 @@ Final Mile</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Up Point" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdu-lc-c55">
-                                        <rect key="frame" x="8" y="211.33333333333334" width="377" height="44"/>
+                                        <rect key="frame" x="8" y="226.33333333333331" width="377" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BQG-Vq-Skp"/>
                                         </constraints>
@@ -934,7 +934,7 @@ Final Mile</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyW-cp-nYi">
-                                        <rect key="frame" x="8" y="10" width="377" height="41"/>
+                                        <rect key="frame" x="8" y="25" width="377" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="mu1-Yu-gQe"/>
                                         </constraints>
@@ -943,7 +943,7 @@ Final Mile</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tracking ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5u-3O-2cV">
-                                        <rect key="frame" x="8" y="260.33333333333331" width="377" height="44"/>
+                                        <rect key="frame" x="8" y="275.33333333333331" width="377" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="6DZ-yL-vNA"/>
                                         </constraints>
@@ -951,7 +951,7 @@ Final Mile</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Delivery Person Contact Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGH-QC-mRQ">
-                                        <rect key="frame" x="8" y="309.33333333333331" width="377" height="44"/>
+                                        <rect key="frame" x="8" y="324.33333333333331" width="377" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="c6o-Qk-Lkv"/>
                                         </constraints>
@@ -959,7 +959,7 @@ Final Mile</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Package Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gS-a5-7Ra">
-                                        <rect key="frame" x="8" y="358.33333333333331" width="377" height="44"/>
+                                        <rect key="frame" x="8" y="373.33333333333331" width="377" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="8tD-QJ-d2c"/>
                                             <constraint firstAttribute="height" constant="44" id="TyR-OW-OWY"/>
@@ -968,7 +968,7 @@ Final Mile</string>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example: Big / Medium / Small" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9W-cp-d44">
-                                        <rect key="frame" x="20" y="402.33333333333331" width="343" height="24"/>
+                                        <rect key="frame" x="20" y="417.33333333333337" width="343" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="CQh-sd-Aq5"/>
                                         </constraints>
@@ -977,7 +977,7 @@ Final Mile</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgC-Os-hJK">
-                                        <rect key="frame" x="15" y="101" width="90" height="35"/>
+                                        <rect key="frame" x="15" y="116" width="90" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="pJY-XD-aRO"/>
                                         </constraints>
@@ -988,7 +988,7 @@ Final Mile</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-4M-5Je">
-                                        <rect key="frame" x="110" y="101" width="90" height="34.333333333333343"/>
+                                        <rect key="frame" x="110" y="115.99999999999999" width="90" height="34.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="9Sy-Ad-kYS"/>
                                         </constraints>
@@ -999,7 +999,7 @@ Final Mile</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv2-MI-Nyp">
-                                        <rect key="frame" x="205" y="101" width="90" height="35"/>
+                                        <rect key="frame" x="205" y="116" width="90" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="CyG-cs-Qh4"/>
                                         </constraints>
@@ -1007,13 +1007,13 @@ Final Mile</string>
                                         <buttonConfiguration key="configuration" style="tinted" title="Flipkart"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Partner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2t-cG-XAh">
-                                        <rect key="frame" x="8" y="75" width="377" height="21"/>
+                                        <rect key="frame" x="8" y="90" width="377" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNP-a8-U51">
-                                        <rect key="frame" x="182" y="138.33333333333334" width="19" height="21"/>
+                                        <rect key="frame" x="182" y="153.33333333333331" width="19" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
@@ -1032,7 +1032,7 @@ Final Mile</string>
                                     <constraint firstItem="BGH-QC-mRQ" firstAttribute="leading" secondItem="MFU-j7-0zz" secondAttribute="leading" constant="8" id="HLb-wg-DII"/>
                                     <constraint firstItem="CgC-Os-hJK" firstAttribute="leading" secondItem="MFU-j7-0zz" secondAttribute="leading" constant="15" id="JX4-rf-9JD"/>
                                     <constraint firstItem="Jv2-MI-Nyp" firstAttribute="top" secondItem="i2t-cG-XAh" secondAttribute="bottom" constant="5" id="Jxp-gL-1Cr"/>
-                                    <constraint firstItem="KyW-cp-nYi" firstAttribute="top" secondItem="MFU-j7-0zz" secondAttribute="top" constant="10" id="K4O-VE-ewr"/>
+                                    <constraint firstItem="KyW-cp-nYi" firstAttribute="top" secondItem="MFU-j7-0zz" secondAttribute="top" constant="25" id="K4O-VE-ewr"/>
                                     <constraint firstAttribute="trailing" secondItem="1gS-a5-7Ra" secondAttribute="trailing" constant="8" id="L2r-9u-Ldw"/>
                                     <constraint firstItem="BGH-QC-mRQ" firstAttribute="top" secondItem="r5u-3O-2cV" secondAttribute="bottom" constant="5" id="S78-qa-k4o"/>
                                     <constraint firstItem="h9W-cp-d44" firstAttribute="leading" secondItem="MFU-j7-0zz" secondAttribute="leading" constant="20" id="UGQ-2N-dHC"/>
@@ -1062,7 +1062,7 @@ Final Mile</string>
                         <constraints>
                             <constraint firstItem="ipl-in-HLc" firstAttribute="leading" secondItem="Awk-qP-Mct" secondAttribute="leading" id="18i-tg-CKL"/>
                             <constraint firstItem="MFU-j7-0zz" firstAttribute="top" secondItem="ipl-in-HLc" secondAttribute="bottom" id="1b3-KD-dsr"/>
-                            <constraint firstItem="ipl-in-HLc" firstAttribute="top" secondItem="Awk-qP-Mct" secondAttribute="top" id="H3D-Ac-feD"/>
+                            <constraint firstItem="ipl-in-HLc" firstAttribute="top" secondItem="3AE-80-HKW" secondAttribute="top" id="H3D-Ac-feD"/>
                             <constraint firstAttribute="bottom" secondItem="MFU-j7-0zz" secondAttribute="bottom" id="HUY-pT-7fy"/>
                             <constraint firstItem="MFU-j7-0zz" firstAttribute="top" secondItem="ipl-in-HLc" secondAttribute="bottom" id="Yi2-Ks-SxN"/>
                             <constraint firstItem="MFU-j7-0zz" firstAttribute="trailing" secondItem="3AE-80-HKW" secondAttribute="trailing" id="fBo-p8-Eis"/>
@@ -1084,12 +1084,12 @@ Final Mile</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oA-v4-szT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2280" y="932"/>
+            <point key="canvasLocation" x="-2280.1526717557249" y="931.69014084507046"/>
         </scene>
-        <!--HomeVC-->
+        <!--Leader BoardVC-->
         <scene sceneID="xbu-f0-Muc">
             <objects>
-                <viewController id="uzU-xP-EE2" customClass="HomeVC" customModule="The_Last_Mile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uzU-xP-EE2" customClass="LeaderBoardVC" customModule="The_Last_Mile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0yi-jT-YKv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1273,7 +1273,7 @@ Final Mile</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bmM-jH-VFs">
-                                <rect key="frame" x="10" y="55" width="373" height="601"/>
+                                <rect key="frame" x="10" y="55" width="373" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="373" id="6uh-Vf-n9B"/>
@@ -2129,10 +2129,10 @@ Final Mile</string>
             </objects>
             <point key="canvasLocation" x="-1196" y="932"/>
         </scene>
-        <!--HomeVC-->
+        <!--Leader BoardVC-->
         <scene sceneID="Hja-mB-SxS">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="55P-CU-94Y" customClass="HomeVC" customModule="The_Last_Mile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="55P-CU-94Y" customClass="LeaderBoardVC" customModule="The_Last_Mile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Fl-4L-rTd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LeaderBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     

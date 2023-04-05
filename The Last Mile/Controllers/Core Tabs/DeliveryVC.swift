@@ -22,10 +22,16 @@ class DeliveryVC: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         DataManagar.GetUserDetailsFromDatabase {
-            
         } OnError: { error in
             self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
         }
+        
+        
+        DataManagar.getBulletinDataFromDatabase {
+        } OnError: { error in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +40,7 @@ class DeliveryVC: UIViewController {
         } OnError: { error in
             self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
         }
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

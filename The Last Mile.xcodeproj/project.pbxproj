@@ -22,7 +22,7 @@
 		F047D36D29D1DFD00059F597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36C29D1DFD00059F597 /* LoginVC.swift */; };
 		F047D36F29D1FA610059F597 /* LoginSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */; };
 		F047D37129D1FAEF0059F597 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D37029D1FAEF0059F597 /* SignUpVC.swift */; };
-		F050758E29952FB000CB1012 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758D29952FB000CB1012 /* HomeVC.swift */; };
+		F050758E29952FB000CB1012 /* LeaderBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758D29952FB000CB1012 /* LeaderBoardVC.swift */; };
 		F05075902995302400CB1012 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758F2995302400CB1012 /* ProfileVC.swift */; };
 		F05075922995309300CB1012 /* DeliveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05075912995309300CB1012 /* DeliveryVC.swift */; };
 		F06BF37229A4BAF300549B0C /* AcceptDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */; };
@@ -60,10 +60,11 @@
 		F047D36C29D1DFD00059F597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpVC.swift; sourceTree = "<group>"; };
 		F047D37029D1FAEF0059F597 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		F050758D29952FB000CB1012 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F050758D29952FB000CB1012 /* LeaderBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVC.swift; sourceTree = "<group>"; };
 		F050758F2995302400CB1012 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F05075912995309300CB1012 /* DeliveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryVC.swift; sourceTree = "<group>"; };
 		F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptDetailVC.swift; sourceTree = "<group>"; };
+		F07B702A29D6E13E0096603B /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressMapVC.swift; sourceTree = "<group>"; };
 		F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		F09F738029A28EC00010A137 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -186,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				F0022F3B29A74C9900A62B25 /* RequestVC.swift */,
-				F050758D29952FB000CB1012 /* HomeVC.swift */,
+				F050758D29952FB000CB1012 /* LeaderBoardVC.swift */,
 				F050758F2995302400CB1012 /* ProfileVC.swift */,
 				F05075912995309300CB1012 /* DeliveryVC.swift */,
 			);
@@ -220,6 +221,7 @@
 				F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */,
 				F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */,
 				F030921729B061DE00690CD6 /* OngoingViewController.swift */,
+				F07B702A29D6E13E0096603B /* Location.gpx */,
 				F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */,
 				F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */,
 				F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */,
@@ -356,7 +358,7 @@
 				F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */,
 				F08D8A7929B7620D00C952D1 /* AddAddressMapVC.swift in Sources */,
 				F0F0D8AC29A341E900B2602E /* AcceptVC.swift in Sources */,
-				F050758E29952FB000CB1012 /* HomeVC.swift in Sources */,
+				F050758E29952FB000CB1012 /* LeaderBoardVC.swift in Sources */,
 				F001BAED298BBF8C00FF2DC3 /* AppDelegate.swift in Sources */,
 				F0AA720C29D2D1AD000968A3 /* service.swift in Sources */,
 				F0F0D8AE29A344D300B2602E /* AcceptTableViewCell.swift in Sources */,
@@ -525,7 +527,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 16.4;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=iphoneos*]" = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

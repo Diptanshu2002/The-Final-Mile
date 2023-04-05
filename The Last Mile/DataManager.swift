@@ -21,7 +21,7 @@ class DataManagar {
         delivery: []
     )
     
-    static var Bulletin = [
+    static var Bulletin : [Delivery] = [
         Delivery(
             request: Request(
                 address: "Sannasi Hostel, SRM",
@@ -36,7 +36,8 @@ class DataManagar {
                 time: "10:52:30",
                 packageSize: "Medium"
             ),
-            deliveryPersonName: ""
+            deliveryPersonName: "",
+            timestamp: 12535647
         )
     ]
     
@@ -174,22 +175,28 @@ class DataManagar {
         
         
         //Uploading the request to make it allRequest path in database
-        let Allrequest = [
-            "uid": uid!,
-            "address": newRequest.address,
-            "name": newRequest.name,
-            "userImg": "profileImage",
-            "status": newRequest.status,
-            "pickupPoint": newRequest.pickupPoint,
-            "trackingId": newRequest.trackingId,
-            "deliveryPartnerContactNumber": newRequest.deliveryPartnerContactNumber,
-            "deliveryPartnerName": newRequest.deliveryPartnerName,
-            "date": newRequest.date,
-            "time": newRequest.time,
-            "packageSize": newRequest.packageSize
-        ]
+       
+           let Delivery = [
+                "request": [
+                    "uid": uid!,
+                    "address": newRequest.address,
+                    "name": newRequest.name,
+                    "userImg": "profileImage",
+                    "status": newRequest.status,
+                    "pickupPoint": newRequest.pickupPoint,
+                    "trackingId": newRequest.trackingId,
+                    "deliveryPartnerContactNumber": newRequest.deliveryPartnerContactNumber,
+                    "deliveryPartnerName": newRequest.deliveryPartnerName,
+                    "date": newRequest.date,
+                    "time": newRequest.time,
+                    "packageSize": newRequest.packageSize
+                ],
+                "deliveryPersonName": "",
+                "timestamp" : [".sv" : "timestamp"]
+           ] as [String : Any]
+    
+        ref.child("allRequests").childByAutoId().setValue(Delivery)
         
-        ref.child("allRequests").setValue(Allrequest)
         return true
     }
     
@@ -207,11 +214,79 @@ class DataManagar {
     
     
     
+    static func getBulletinDataFromDatabase(onSuccess: @escaping ()-> Void, OnError: @escaping (_ error: Error?) -> Void){
+        
+        let ref = Database.database().reference().child("allRequests")
+        let queryRef = ref.queryOrdered(byChild: "timestamp").queryLimited(toLast: 20)
+        
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        var tempBulletin = [Delivery]()
+        
+        queryRef.observe(.value, with: { snapshot in
+            for child in snapshot.children{
+                if let childSnapshot = child as? DataSnapshot,
+                   let dict = childSnapshot.value as? [String : Any],
+                   let delivery = Service.parseIncomingBulletinRequest(childSnapshot.key, dict)
+//                   let deliveryPersonName = dict["deliveryPersonName"] as? String,
+//                   let timestamp = dict["timestamp"] as? Double,
+//
+//                   let requestDict = dict["request"] as? [String: Any],
+//
+//                   let address = requestDict["address"] as? String,
+//                   let name = requestDict["name"] as? String,
+//                   let date = requestDict["date"] as? String,
+//                   let deliveryPartnerContactNumber = requestDict["deliveryPartnerContactNumber"] as? String,
+//                   let deliveryPartnerName = requestDict["deliveryPartnerName"] as? String,
+//                   let time = requestDict["time"] as? String,
+//                   let status = requestDict["status"] as? String,
+//                   let pickupPoint = requestDict["pickupPoint"] as? String,
+//                   let packageSize = requestDict["packageSize"] as? String,
+//                   let trackingId = requestDict["trackingId"] as? String,
+//                   let userImg = requestDict["userImg"] as? String
+                {
+                    
+//                    let delivery = Delivery(
+//                        request: Request(
+//                            address: address,
+//                            name: name,
+//                            userImg: userImg,
+//                            status: status,
+//                            pickupPoint: pickupPoint,
+//                            trackingId: trackingId,
+//                            deliveryPartnerContactNumber: deliveryPartnerContactNumber,
+//                            deliveryPartnerName: deliveryPartnerName,
+//                            date: date,
+//                            time: time,
+//                            packageSize: packageSize
+//                        ),
+//                        deliveryPersonName: deliveryPersonName,
+//                        timestamp: timestamp
+//                    )
+                    
+                    tempBulletin.insert(delivery, at: 0)
+                    DataManagar.Bulletin = tempBulletin
+                    print("Deliveried : ", DataManagar.Bulletin)
+                    onSuccess()
+                }
+            }
+        })
+        
+        print("Bulletin Delivery : ", tempBulletin)
+    }
+    
+    
     public func getBulletin() -> [Delivery] {
         return DataManagar.Bulletin
     }
+    
+    
+    
 }
     
+
+
 
 // Assuming you have retrieved the dictionary from the Realtime Database and assigned it to a constant named userProfileDict
 /*

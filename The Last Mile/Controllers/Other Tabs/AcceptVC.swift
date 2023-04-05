@@ -5,7 +5,7 @@ class AcceptVC: UIViewController {
     
     @IBOutlet weak var acceptTableView: UITableView!
     
-    let deliveryDetails = DataManagar.shared.getBulletin()
+    var deliveryDetails = DataManagar.shared.getBulletin()
     
 
     override func viewDidLoad() {
@@ -16,7 +16,24 @@ class AcceptVC: UIViewController {
         acceptTableView.showsVerticalScrollIndicator = false
         acceptTableView.delegate = self
         acceptTableView.dataSource = self
+        
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+        DataManagar.getBulletinDataFromDatabase {
+            self.deliveryDetails = DataManagar.shared.getBulletin()
+            self.acceptTableView.reloadData()
+            print("view will appeart acceptVC ------------------")
+        } OnError: { error in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true)
+        }
+    }
+    
 }
 
 
@@ -29,13 +46,9 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource{
         return deliveryDetails.count
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
-    
-  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "accept_cell", for: indexPath)
@@ -51,8 +64,6 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
-    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 20.0
     }
@@ -61,7 +72,6 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource{
         return UIView()
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
         print(indexPath.row)
@@ -69,10 +79,6 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource{
         if let vc = storyboard?.instantiateViewController(withIdentifier: "AcceptDetailViewController") as? AcceptDetailVC {
             vc.details = deliveryDetails[indexPath.section]
             self.navigationController?.pushViewController(vc, animated: true)
-//            self.present(vc, animated: true)
             }
     }
-    
-    
-    
 }

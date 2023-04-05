@@ -21,9 +21,10 @@ class OngoingDeliveryVC: UIViewController {
     
     //Action
     @IBAction func openDirectionButton(_ sender: UIButton){
-//        openMap(Address: "Sannasi Hostel")
+//        openMap(Address: "Sannasi Hostel SRM Kattankulathur")
 //        openAddressInMap(address: deliveryAddr)
         openMapsWithAddress(address: deliveryAddr)
+//        openGoogleMaps(withLocation: "Sannasi Hostel SRM Chennai")
     }
     
     @IBAction func openCallButton(_ sender: UIButton){
@@ -55,10 +56,10 @@ class OngoingDeliveryVC: UIViewController {
 extension OngoingDeliveryVC {
     
     func openMap(Address: String){
-//        let mapAddress = Address.replacingOccurrences(of: " ", with: "-")
-//        print(mapAddress)
-//
-//        UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/?address=\(mapAddress)")! as URL)
+        let mapAddress = Address.replacingOccurrences(of: " ", with: ",")
+        print(mapAddress)
+
+        UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/?address=\(mapAddress)")! as URL)
 
 //        let myAddress = "SRM"
 //        let geoCoder = CLGeocoder()
@@ -115,7 +116,17 @@ extension OngoingDeliveryVC {
             }
         }
     }
+    
+    
+    func openGoogleMaps(withLocation location: String) {
+            if let url = URL(string: "comgooglemaps://?q=\(location)") {
+                UIApplication.shared.open(url)
+            } else {
+                print("Error: Google Maps not installed.")
+            }
+    }
 
+    
     
     
     func phone(phoneNum: String) {

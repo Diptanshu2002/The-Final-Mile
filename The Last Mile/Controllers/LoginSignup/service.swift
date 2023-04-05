@@ -28,4 +28,47 @@ class Service{
     }
     
     
+    static func parseIncomingBulletinRequest(_ key: String, _ data:[String: Any])->Delivery?{
+        
+        if let deliveryPersonName = data["deliveryPersonName"] as? String,
+        let timestamp = data["timestamp"] as? Double,
+        
+        let requestDict = data["request"] as? [String: Any],
+        
+        let address = requestDict["address"] as? String,
+        let name = requestDict["name"] as? String,
+        let date = requestDict["date"] as? String,
+        let deliveryPartnerContactNumber = requestDict["deliveryPartnerContactNumber"] as? String,
+        let deliveryPartnerName = requestDict["deliveryPartnerName"] as? String,
+        let time = requestDict["time"] as? String,
+        let status = requestDict["status"] as? String,
+        let pickupPoint = requestDict["pickupPoint"] as? String,
+        let packageSize = requestDict["packageSize"] as? String,
+        let trackingId = requestDict["trackingId"] as? String,
+        let userImg = requestDict["userImg"] as? String{
+            
+            let delivery = Delivery(
+                request: Request(
+                    address: address,
+                    name: name,
+                    userImg: userImg,
+                    status: status,
+                    pickupPoint: pickupPoint,
+                    trackingId: trackingId,
+                    deliveryPartnerContactNumber: deliveryPartnerContactNumber,
+                    deliveryPartnerName: deliveryPartnerName,
+                    date: date,
+                    time: time,
+                    packageSize: packageSize
+                ),
+                deliveryPersonName: deliveryPersonName,
+                timestamp: timestamp
+            )
+            
+            return delivery
+        }
+        
+        return nil
+    }
+    
 }

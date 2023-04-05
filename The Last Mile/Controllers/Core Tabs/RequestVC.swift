@@ -41,6 +41,7 @@ class RequestVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         userRequest = DataManagar.shared.getUserRequest()
+        
         requestTableView.reloadData()
         print("view will appear", userRequest)
     }
@@ -97,6 +98,7 @@ extension RequestVC {
     @objc public func addRequest(){
         if let vc = storyboard?.instantiateViewController(withIdentifier: "AddRequestViewController") as? AddRequestViewController {
                 vc.requestTableViewRef = requestTableView
+            vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true)
             }
     }
