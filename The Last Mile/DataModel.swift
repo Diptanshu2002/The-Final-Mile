@@ -24,6 +24,7 @@ struct Profile {
     var addresses: [Addresses]
     var request: [Request]
     var delivery: [Request]
+    var ongoing: [Request]
 }
 
 
@@ -50,7 +51,8 @@ struct Request {
     var date: String
     var time: String
     var packageSize: String
-    
+    var societyDeliveryPersonName: String
+    var societyDeliveryPersonNumber: String
 }
 
 enum RequestStatus: String {
@@ -61,6 +63,28 @@ enum RequestStatus: String {
 
 struct Delivery {
     var request: Request
-    var deliveryPersonName: String
     var timestamp : Double
 }
+
+//let requests = requestDict.map{dict -> [String:Any] in
+//
+//    if dict["trackingId"] != delivery1.trackingId{
+//        return dict
+//    }else{
+//        return [
+//            "address" : dict["address"],
+//            "name" : dict["name"],
+//            "userImg" : dict["userImg"],
+//            "status" : RequestStatus.onAccept.rawValue,
+//            "pickupPoint" : dict["pickupPoint"],
+//            "trackingId" : dict["trackingId"],
+//            "deliveryPartnerContactNumber" : dict["deliveryPartnerContactNumber"],
+//            "deliveryPartnerName" : dict["deliveryPartnerName"],
+//            "date" : dict["date"],
+//            "time" : dict["time"],
+//            "packageSize" : dict["packageSize"],
+//            "societyDeliveryPersonName" : DataManagar.userProfile.profileName,
+//            "societyDeliveryPersonNumber" : "787878787877"
+//        ]
+//    }
+//}

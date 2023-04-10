@@ -18,12 +18,13 @@ class OngoingDeliveryVC: UIViewController {
     
     //Outlets
     @IBOutlet weak var deliveryAddress: UILabel!
+    @IBOutlet weak var deliveredButtonOutlet: UIButton!
     
     //Action
     @IBAction func openDirectionButton(_ sender: UIButton){
 //        openMap(Address: "Sannasi Hostel SRM Kattankulathur")
 //        openAddressInMap(address: deliveryAddr)
-        openMapsWithAddress(address: deliveryAddr)
+//        openMapsWithAddress(address: "SRM Chennai")
 //        openGoogleMaps(withLocation: "Sannasi Hostel SRM Chennai")
     }
     
@@ -31,13 +32,36 @@ class OngoingDeliveryVC: UIViewController {
 //        if let url = URL(string: "tel://\(contactNumber)") {
 //             UIApplication.shared.openURL(url)
 //         }
-        phone(phoneNum: contactNumber)
+//        phone(phoneNum: contactNumber)
+    }
+    
+    
+    @IBAction func deliveredButton(_ sender: UIButton){
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        deliveredButtonOutlet.setTitle("Swipe To Complete Delivery", for: .normal)
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(completeButtonSwiped))
+                swipeGestureRecognizer.direction = .right
+        deliveredButtonOutlet.addGestureRecognizer(swipeGestureRecognizer)
     }
+    
+    @objc func completeButtonSwiped() {
+        deliveredButtonOutlet.isSelected = true
+        deliveredButtonOutlet.setTitle("Thank You For Delivery", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.dismiss(animated: true)
+            print("1 seconds have passed!")
+        }
+        
+        print("button swiped")
+       }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -54,89 +78,5 @@ class OngoingDeliveryVC: UIViewController {
 }
 
 extension OngoingDeliveryVC {
-    
-    func openMap(Address: String){
-        let mapAddress = Address.replacingOccurrences(of: " ", with: ",")
-        print(mapAddress)
-
-        UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/?address=\(mapAddress)")! as URL)
-
-//        let myAddress = "SRM"
-//        let geoCoder = CLGeocoder()
-//        geoCoder.geocodeAddressString(myAddress) { (placemarks, error) in
-//            guard let placemarks = placemarks?.first else { return }
-//            let location = placemarks.location?.coordinate ?? CLLocationCoordinate2D()
-//            guard let url = URL(string:"http://maps.apple.com/?daddr=\(location.latitude),\(location.longitude)") else { return }
-//            UIApplication.shared.open(url)
-//        }
-    }
- 
-        
-    func openAddressInMap(address: String?){
-        guard let address = address else {return}
-
-        let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(address) { (placemarks, error) in
-            guard let placemarks = placemarks?.first else {
-                return
-            }
-
-            let location = placemarks.location?.coordinate
-
-            if let lat = location?.latitude, let lon = location?.longitude{
-                let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)))
-                destination.name = address
-
-                MKMapItem.openMaps(
-                    with: [destination]
-                )
-            }
-        }
-    }
-    
-    
-    func openMapsWithAddress(address: String) {
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) { (placemarks, error) in
-            if let error = error {
-                // Handle the error
-                print("Geocoding failed: \(error.localizedDescription)")
-                return
-            }
-            
-            if let placemark = placemarks?.first {
-                let mapItem = MKMapItem(placemark: MKPlacemark(placemark: placemark))
-                mapItem.name = address
-                
-                // Set the options for the map launch
-                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-                
-                // Launch Apple Maps and open the location
-                mapItem.openInMaps(launchOptions: launchOptions)
-            }
-        }
-    }
-    
-    
-    func openGoogleMaps(withLocation location: String) {
-            if let url = URL(string: "comgooglemaps://?q=\(location)") {
-                UIApplication.shared.open(url)
-            } else {
-                print("Error: Google Maps not installed.")
-            }
-    }
-
-    
-    
-    
-    func phone(phoneNum: String) {
-        if let url = URL(string: "tel://\(phoneNum)") {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url as URL)
-            }
-        }
-    }
     
 }

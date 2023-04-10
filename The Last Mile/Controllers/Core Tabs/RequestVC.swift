@@ -59,6 +59,7 @@ extension RequestVC: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         userRequest.count
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -84,6 +85,29 @@ extension RequestVC: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "RequesrSheetVC") as? RequesrSheetVC {
+            
+            vc.contact = userRequest[indexPath.section].societyDeliveryPersonNumber
+            vc.name = userRequest[indexPath.section].societyDeliveryPersonName
+            vc.trackingId = userRequest[indexPath.section].trackingId
+            
+            let smallDetentId = UISheetPresentationController.Detent.Identifier("small")
+            let smallDetent = UISheetPresentationController.Detent.custom(identifier: smallDetentId) { context in
+                return 300
+            }
+            
+            
+            if let sheet = vc.sheetPresentationController{
+                sheet.detents = [smallDetent]
+                sheet.prefersGrabberVisible = true
+                sheet.preferredCornerRadius = 24
+            }
+            
+            self.navigationController?.present(vc, animated: true)
+            }
     }
     
     

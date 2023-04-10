@@ -15,11 +15,11 @@ class LeaderBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var leaderBoardTableView: UITableView!
     
     var leaderboard : [LeaderBoard] = [
-        LeaderBoard(rank: 1, userName: "abc", credits: 5000),
-        LeaderBoard(rank: 2, userName: "def", credits: 3000),
-        LeaderBoard(rank: 3, userName: "ghi", credits: 1000),
-        LeaderBoard(rank: 4, userName: "jkl", credits: 500),
-        LeaderBoard(rank: 5, userName: "mno", credits: 10)
+        LeaderBoard(rank: 1, userName: "Sayan", credits: 5000),
+        LeaderBoard(rank: 2, userName: "Rohan", credits: 3000),
+        LeaderBoard(rank: 3, userName: "Sonali", credits: 1000),
+        LeaderBoard(rank: 4, userName: "Anish", credits: 500),
+        LeaderBoard(rank: 5, userName: "Umar", credits: 10)
     ]
     
     

@@ -18,13 +18,13 @@
 		F0022F4029A7C63400A62B25 /* AddRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */; };
 		F004C6B129CB85B900FA4A5F /* testingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F004C6B029CB85B900FA4A5F /* testingViewController.swift */; };
 		F0103FE629A3CC6400C2B6A4 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */; };
-		F030921829B061DE00690CD6 /* OngoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F030921729B061DE00690CD6 /* OngoingViewController.swift */; };
 		F047D36D29D1DFD00059F597 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36C29D1DFD00059F597 /* LoginVC.swift */; };
 		F047D36F29D1FA610059F597 /* LoginSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */; };
 		F047D37129D1FAEF0059F597 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F047D37029D1FAEF0059F597 /* SignUpVC.swift */; };
 		F050758E29952FB000CB1012 /* LeaderBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758D29952FB000CB1012 /* LeaderBoardVC.swift */; };
 		F05075902995302400CB1012 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050758F2995302400CB1012 /* ProfileVC.swift */; };
 		F05075922995309300CB1012 /* DeliveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05075912995309300CB1012 /* DeliveryVC.swift */; };
+		F0643B3929E203960010CDE9 /* BulletinSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0643B3829E203960010CDE9 /* BulletinSheetVC.swift */; };
 		F06BF37229A4BAF300549B0C /* AcceptDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */; };
 		F08D8A7929B7620D00C952D1 /* AddAddressMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */; };
 		F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09F737E29A285B40010A137 /* ProfileTableViewCell.swift */; };
@@ -34,6 +34,7 @@
 		F0AA721129D326C9000968A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0AA721029D326C9000968A3 /* GoogleService-Info.plist */; };
 		F0CA24CF29C32F160058B3FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA24CE29C32F160058B3FA /* DataManager.swift */; };
 		F0CA24D129C3AC5B0058B3FA /* AddAddressFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */; };
+		F0E005B129DFB5D2000F5DA8 /* RequesrSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E005B029DFB5D2000F5DA8 /* RequesrSheetVC.swift */; };
 		F0E0D792299776880031D133 /* AddressCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */; };
 		F0E5FB5D29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E5FB5C29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift */; };
 		F0F0D8AC29A341E900B2602E /* AcceptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0D8AB29A341E900B2602E /* AcceptVC.swift */; };
@@ -56,13 +57,13 @@
 		F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequestViewController.swift; sourceTree = "<group>"; };
 		F004C6B029CB85B900FA4A5F /* testingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testingViewController.swift; sourceTree = "<group>"; };
 		F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
-		F030921729B061DE00690CD6 /* OngoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingViewController.swift; sourceTree = "<group>"; };
 		F047D36C29D1DFD00059F597 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F047D36E29D1FA610059F597 /* LoginSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpVC.swift; sourceTree = "<group>"; };
 		F047D37029D1FAEF0059F597 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		F050758D29952FB000CB1012 /* LeaderBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVC.swift; sourceTree = "<group>"; };
 		F050758F2995302400CB1012 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		F05075912995309300CB1012 /* DeliveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryVC.swift; sourceTree = "<group>"; };
+		F0643B3829E203960010CDE9 /* BulletinSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinSheetVC.swift; sourceTree = "<group>"; };
 		F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptDetailVC.swift; sourceTree = "<group>"; };
 		F07B702A29D6E13E0096603B /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressMapVC.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		F0AA721029D326C9000968A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0CA24CE29C32F160058B3FA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F0CA24D029C3AC5B0058B3FA /* AddAddressFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressFormVC.swift; sourceTree = "<group>"; };
+		F0E005B029DFB5D2000F5DA8 /* RequesrSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesrSheetVC.swift; sourceTree = "<group>"; };
 		F0E0D790299776880031D133 /* AddressCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCustomTableViewCell.swift; sourceTree = "<group>"; };
 		F0E5FB5C29ADFF5300E7A056 /* LeaderBoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoardTableViewCell.swift; sourceTree = "<group>"; };
 		F0F0D8AB29A341E900B2602E /* AcceptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptVC.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		F050758B29952F4100CB1012 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F0E005AF29DFB500000F5DA8 /* sheet presentation */,
 				F047D36B29D1DE230059F597 /* LoginSignup */,
 				F0F0D8AA29A341B200B2602E /* Other Tabs */,
 				F0E0D78F299776530031D133 /* Custom cells */,
@@ -202,6 +205,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		F0E005AF29DFB500000F5DA8 /* sheet presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F0E005B029DFB5D2000F5DA8 /* RequesrSheetVC.swift */,
+				F0643B3829E203960010CDE9 /* BulletinSheetVC.swift */,
+			);
+			path = "sheet presentation";
+			sourceTree = "<group>";
+		};
 		F0E0D78F299776530031D133 /* Custom cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +232,6 @@
 				F0F0D8AB29A341E900B2602E /* AcceptVC.swift */,
 				F06BF37129A4BAF300549B0C /* AcceptDetailVC.swift */,
 				F0022F3F29A7C63400A62B25 /* AddRequestViewController.swift */,
-				F030921729B061DE00690CD6 /* OngoingViewController.swift */,
 				F07B702A29D6E13E0096603B /* Location.gpx */,
 				F0103FE529A3CC6400C2B6A4 /* AddressVC.swift */,
 				F08D8A7829B7620D00C952D1 /* AddAddressMapVC.swift */,
@@ -353,6 +364,7 @@
 				F0022F3C29A74C9900A62B25 /* RequestVC.swift in Sources */,
 				F0022F4029A7C63400A62B25 /* AddRequestViewController.swift in Sources */,
 				F004C6B129CB85B900FA4A5F /* testingViewController.swift in Sources */,
+				F0E005B129DFB5D2000F5DA8 /* RequesrSheetVC.swift in Sources */,
 				F0CA24D129C3AC5B0058B3FA /* AddAddressFormVC.swift in Sources */,
 				F047D36F29D1FA610059F597 /* LoginSignUpVC.swift in Sources */,
 				F09F737F29A285B40010A137 /* ProfileTableViewCell.swift in Sources */,
@@ -364,8 +376,8 @@
 				F0F0D8AE29A344D300B2602E /* AcceptTableViewCell.swift in Sources */,
 				F05075922995309300CB1012 /* DeliveryVC.swift in Sources */,
 				F047D37129D1FAEF0059F597 /* SignUpVC.swift in Sources */,
-				F030921829B061DE00690CD6 /* OngoingViewController.swift in Sources */,
 				F09F738129A28EC00010A137 /* DataModel.swift in Sources */,
+				F0643B3929E203960010CDE9 /* BulletinSheetVC.swift in Sources */,
 				F0CA24CF29C32F160058B3FA /* DataManager.swift in Sources */,
 				F06BF37229A4BAF300549B0C /* AcceptDetailVC.swift in Sources */,
 				F0103FE629A3CC6400C2B6A4 /* AddressVC.swift in Sources */,

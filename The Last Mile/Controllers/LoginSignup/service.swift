@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
 
 class Service{
     
@@ -30,8 +32,7 @@ class Service{
     
     static func parseIncomingBulletinRequest(_ key: String, _ data:[String: Any])->Delivery?{
         
-        if let deliveryPersonName = data["deliveryPersonName"] as? String,
-        let timestamp = data["timestamp"] as? Double,
+        if let timestamp = data["timestamp"] as? Double,
         
         let requestDict = data["request"] as? [String: Any],
         
@@ -45,6 +46,8 @@ class Service{
         let pickupPoint = requestDict["pickupPoint"] as? String,
         let packageSize = requestDict["packageSize"] as? String,
         let trackingId = requestDict["trackingId"] as? String,
+        let societyDeliveryPersonName = requestDict["societyDeliveryPersonName"] as? String,
+        let societyDeliveryPersonNumber = requestDict["societyDeliveryPersonNumber"] as? String,
         let userImg = requestDict["userImg"] as? String{
             
             let delivery = Delivery(
@@ -59,9 +62,10 @@ class Service{
                     deliveryPartnerName: deliveryPartnerName,
                     date: date,
                     time: time,
-                    packageSize: packageSize
+                    packageSize: packageSize,
+                    societyDeliveryPersonName: societyDeliveryPersonName,
+                    societyDeliveryPersonNumber: societyDeliveryPersonNumber
                 ),
-                deliveryPersonName: deliveryPersonName,
                 timestamp: timestamp
             )
             
@@ -71,4 +75,9 @@ class Service{
         return nil
     }
     
+    
+
+    
+    
+ //end of class
 }

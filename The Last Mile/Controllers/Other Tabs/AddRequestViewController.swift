@@ -169,29 +169,36 @@ extension AddRequestViewController {
             self.deliveryPartner = deliveryPartner
         }
         
-        let deliveryAddress = "\(currentAddress[0].houseAddress),\(currentAddress[0].streetName),\(currentAddress[0].area),\(currentAddress[0].city),\(currentAddress[0].pincode)"
-        
-        let newRequest = Request(
-            address: deliveryAddress,
-            name: userDetails.profileName,
-            userImg: userDetails.profileImg,
-            status: RequestStatus.onRequest.rawValue,
-            pickupPoint: pickUpPoint,
-            trackingId: trackingId,
-            deliveryPartnerContactNumber: deliveryPartnerContactNumber,
-            deliveryPartnerName: deliveryPartner,
-            date: date,
-            time: time,
-            packageSize: packageSizeTF)
-        
-        print(newRequest)
-        let result = DataManagar.shared.postNewRequest(newRequest: newRequest)
-        self.dismiss(animated: true) {
-            self.requestTableViewRef.reloadData()
+        if currentAddress.isEmpty{
             
-        }
+            self.present(Service.createAlertController(title: "No Address Found", message: "Create New Address under the Profile Section"), animated: true)
+        }else{
+            let deliveryAddress = "\(currentAddress[0].houseAddress),\(currentAddress[0].streetName),\(currentAddress[0].area),\(currentAddress[0].city),\(currentAddress[0].pincode)"
             
+            let newRequest = Request(
+                address: deliveryAddress,
+                name: userDetails.profileName,
+                userImg: userDetails.profileImg,
+                status: RequestStatus.onRequest.rawValue,
+                pickupPoint: pickUpPoint,
+                trackingId: trackingId,
+                deliveryPartnerContactNumber: deliveryPartnerContactNumber,
+                deliveryPartnerName: deliveryPartner,
+                date: date,
+                time: time,
+                packageSize: packageSizeTF,
+                societyDeliveryPersonName: "",
+                societyDeliveryPersonNumber: ""
+            )
+            
+            print(newRequest)
+            let result = DataManagar.shared.postNewRequest(newRequest: newRequest)
+            self.dismiss(animated: true) {
+                self.requestTableViewRef.reloadData()
+                
+            }
         }
+    }
     
     
     
