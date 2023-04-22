@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class AcceptDetailVC: UIViewController {
-
-    var acceptInfo = "accept"
-    var details: Delivery = Delivery(
-        request:Request(
+    
+    var acceptInfo = ""
+    
+    
+    var details = Request(
             address: "",
             name: "",
             userImg: "",
@@ -22,11 +25,10 @@ class AcceptDetailVC: UIViewController {
             deliveryPartnerName: "",
             date: "",
             time: "",
-            packageSize: ""
-        ),
-        deliveryPersonName: "",
-        timestamp: Double()
-    )
+            packageSize: "",
+            societyDeliveryPersonName: "",
+            societyDeliveryPersonNumber: ""
+        )
     
     
     
@@ -36,10 +38,7 @@ class AcceptDetailVC: UIViewController {
     //UI Label
     @IBOutlet weak var orderInfo: UIView!
     
-    //UI Button
-    @IBOutlet weak var acceptButtonLabel: UIButton!
-    
-    
+
     //UI Image linkers
     @IBOutlet weak var transactionIdImage: UIImageView!
     @IBOutlet weak var acceptDetailImageView: UIImageView!
@@ -55,45 +54,46 @@ class AcceptDetailVC: UIViewController {
     @IBOutlet weak var deliveryPartnerContactNumber:UILabel!
     @IBOutlet weak var packageSizeLabel:UILabel!
 
-
-
-    
-    @IBAction func acceptButton(_ sender: UIButton) {
-        
-        if acceptInfo == "accept" {
-            sender.setTitle("More Info", for: .normal)
-            acceptButtonLabel.layer.backgroundColor = UIColor(named: "systemBlue")?.cgColor
-        }else{
-            sender.setTitle("Accept", for: .normal)
-        }
-        
-        
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "OngoingDeliveryViewController") as? OngoingDeliveryVC {
-            
-            vc.deliveryAddr = details.request.address
-            vc.contactNumber = details.request.deliveryPartnerContactNumber
-            
-            navigationController?.pushViewController(vc, animated: true)
-            }
-        
+    //Action
+    @IBAction func directionButton(_ sender: UIButton){
+        //        openMap(Address: "Sannasi Hostel SRM Kattankulathur")
+        //        openAddressInMap(address: deliveryAddr)
+                openMapsWithAddress(address: "SRM Chennai")
+        //        openGoogleMaps(withLocation: "Sannasi Hostel SRM Chennai")
     }
+    
+    @IBAction func callButton(_ sender: UIButton){
+        //need to add package owner contact number
+        phone(phoneNum: "6290607898")
+    }
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = false
+
         style()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        acceptDetailLabel.text = details.request.name
-        pickUpLocationLabel.text = details.request.pickupPoint
-        dropInLocation.text = details.request.address
-        transactionIdLabel.text = details.request.trackingId
-        dateLabel.text = details.request.date
-        timeLabel.text = details.request.time
-        deliveryPartnerNameLabel.text = details.request.deliveryPartnerName
-        deliveryPartnerContactNumber.text = details.request.deliveryPartnerContactNumber
-        packageSizeLabel.text = details.request.packageSize
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
+        acceptDetailLabel.text = details.name
+        pickUpLocationLabel.text = details.pickupPoint
+        dropInLocation.text = details.address
+        transactionIdLabel.text = details.trackingId
+        dateLabel.text = details.date
+        timeLabel.text = details.time
+        deliveryPartnerNameLabel.text = details.deliveryPartnerName
+        deliveryPartnerContactNumber.text = details.deliveryPartnerContactNumber
+        packageSizeLabel.text = details.packageSize
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+
     }
     
     private func style(){
@@ -111,5 +111,100 @@ class AcceptDetailVC: UIViewController {
 //        orderInfo.layer.shadowOffset = .zero
 //        orderInfo.layer.shadowRadius = 2
         orderInfo.backgroundColor = UIColor(named: "redBackground")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+extension AcceptDetailVC {
+    func openMap(Address: String){
+        let mapAddress = Address.replacingOccurrences(of: " ", with: ",")
+        print(mapAddress)
+
+        UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/?address=\(mapAddress)")! as URL)
+
+//        let myAddress = "SRM"
+//        let geoCoder = CLGeocoder()
+//        geoCoder.geocodeAddressString(myAddress) { (placemarks, error) in
+//            guard let placemarks = placemarks?.first else { return }
+//            let location = placemarks.location?.coordinate ?? CLLocationCoordinate2D()
+//            guard let url = URL(string:"http://maps.apple.com/?daddr=\(location.latitude),\(location.longitude)") else { return }
+//            UIApplication.shared.open(url)
+//        }
+    }
+ 
+
+    func openAddressInMap(address: String?){
+        guard let address = address else {return}
+
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(address) { (placemarks, error) in
+            guard let placemarks = placemarks?.first else {
+                return
+            }
+
+            let location = placemarks.location?.coordinate
+
+            if let lat = location?.latitude, let lon = location?.longitude{
+                let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon)))
+                destination.name = address
+
+                MKMapItem.openMaps(
+                    with: [destination]
+                )
+            }
+        }
+    }
+    
+    
+    func openMapsWithAddress(address: String) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
+            if let error = error {
+                // Handle the error
+                print("Geocoding failed: \(error.localizedDescription)")
+                return
+            }
+            
+            if let placemark = placemarks?.first {
+                let mapItem = MKMapItem(placemark: MKPlacemark(placemark: placemark))
+                mapItem.name = address
+                
+                // Set the options for the map launch
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                
+                // Launch Apple Maps and open the location
+                mapItem.openInMaps(launchOptions: launchOptions)
+            }
+        }
+    }
+    
+    
+    func openGoogleMaps(withLocation location: String) {
+            if let url = URL(string: "comgooglemaps://?q=\(location)") {
+                UIApplication.shared.open(url)
+            } else {
+                print("Error: Google Maps not installed.")
+            }
+    }
+
+    
+    
+    
+    func phone(phoneNum: String) {
+        if let url = URL(string: "tel://\(phoneNum)") {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url as URL)
+            }
+        }
     }
 }
