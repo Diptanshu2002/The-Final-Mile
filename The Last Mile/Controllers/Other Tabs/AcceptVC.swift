@@ -120,7 +120,7 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource, MyCellDelegate{
             accept_Cell?.details = onGoingDeliveryDetails[indexPath.section]
             accept_Cell?.index = indexPath.section
             accept_Cell?.delegate = self
-            
+            accept_Cell?.acceptButtonOutlet.setTitle("Accepted", for: .normal)
         }else{
             accept_Cell?.dropTitleLabel.text = "Pick Up"
             accept_Cell?.dropLocationTitleLabel.text = deliveryDetails[indexPath.section - onGoingDeliveryDetails.count].request.pickupPoint
@@ -130,6 +130,7 @@ extension AcceptVC: UITableViewDelegate, UITableViewDataSource, MyCellDelegate{
             accept_Cell?.details = deliveryDetails[indexPath.section - onGoingDeliveryDetails.count].request
             accept_Cell?.index = indexPath.section
             accept_Cell?.delegate = self
+            accept_Cell?.acceptButtonOutlet.setTitle("Accept", for: .normal)
         }
         
         

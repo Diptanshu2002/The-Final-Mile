@@ -287,7 +287,6 @@ class DataManagar {
         
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
-        //        queryRef.queryLimited(toLast: 20).observeSingleEvent
         ref.observeSingleEvent(of: .value, with: { snapshot in
             
             var tempBulletin = [Delivery]()
@@ -362,18 +361,19 @@ class DataManagar {
         return DataManagar.OngoingDelivery
     }
     
+    
     public func setOngoingDelivery(delivery1: Request) -> Void{
-//        print("setOngoingDelivery",delivery1)
+        print("setOngoingDelivery",delivery1)
         // 3 main things will change
         
-        // 1. delete from all request with timestap as key
+        // 1. delete from all request with trackinhg as key
         var requestUserUid = ""
         
         Database.database().reference().child("allRequests").observeSingleEvent(of: .value, with: { snapshot in
             
             var tempBulletin = [Request]()
             var data = []
-            
+            print("snapsjot",snapshot)
             
             for child in snapshot.children{
                 if let childSnapshot = child as? DataSnapshot,
@@ -382,12 +382,10 @@ class DataManagar {
                    let uid = requestDict["uid"] as? String,
                    let delivery = Service.parseIncomingBulletinRequest(childSnapshot.key, dict)
                 {
-//                    tempBulletin.insert(delivery, at: 0)
-//                    DataManagar.Bulletin = tempBulletin
-//                    print("Deliveried : ", DataManagar.Bulletin)
+                    print("delivery_needed",delivery)
+                    
                     if delivery.request.trackingId != delivery1.trackingId{
-//                        tempBulletin.insert(delivery, at: 0)
-                        
+                        print("inside the if - 1")
                         let Delivery = [
                             "request": [
                                 "uid": uid,
@@ -409,10 +407,11 @@ class DataManagar {
                         ] as [String : Any]
                         
                         data.append(Delivery)
-                        
-                        
+                    }
+                        print("working---------------")
                         // 2. update request in user using user uid and tracking id
                         Database.database().reference().child("users").child(uid).observe(.value) { snapshot  in
+                            
                             if var userDict = snapshot.value as? [String: Any]{
                                 var requestDict = userDict["request"] as? [[String:Any]] ?? []
                                 var requests = requestDict.map{dict -> Request in
@@ -432,7 +431,7 @@ class DataManagar {
                                         societyDeliveryPersonNumber: dict["societyDeliveryPersonNumber"] as? String ?? ""
                                     )
                                 }
-                                
+                                print("all request of user", requests)
                                 for request in 0..<requests.count {
                                     if requests[request].trackingId == delivery1.trackingId{
                                         requests[request].status = RequestStatus.onAccept.rawValue
@@ -462,16 +461,14 @@ class DataManagar {
                                     dict.append(req)
                                 }
                                 
+                                print("chedfdfdfdfdf",dict)
                                 
                                 Database.database().reference().child("users").child(uid).updateChildValues([
                                     "request" : dict ])
                                 print("updated request check", dict)
                                 
-                            }
+                            
                         }
-                        
-                        
-                        
                         
                     }
                 }
@@ -481,6 +478,7 @@ class DataManagar {
             //write completion statement here
         })
         
+        //WORKING-
         //3.  add to ongoing request to the currentUser
         guard let CurUid = Auth.auth().currentUser?.uid else{
             return

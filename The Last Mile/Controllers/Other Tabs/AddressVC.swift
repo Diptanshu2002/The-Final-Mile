@@ -28,7 +28,7 @@ class AddressVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
-        print("inside addressVC",addresses[0].locationType)
+//        print("inside addressVC",addresses[0].locationType)
         
     }
 

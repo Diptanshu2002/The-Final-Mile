@@ -16,6 +16,8 @@ class AcceptTableViewCell: UITableViewCell {
     
     weak var delegate: MyCellDelegate?
     
+    var isAccept = false
+    
     var index: Int = 0
     var details = Request(
             address: "",
@@ -52,6 +54,7 @@ class AcceptTableViewCell: UITableViewCell {
             DataManagar.shared.setOngoingDelivery(delivery1: details)
             DataManagar.shared.deleteBulletin(index: details.trackingId)
             
+            
             print("details : ", details)
         }
         
@@ -65,6 +68,7 @@ class AcceptTableViewCell: UITableViewCell {
         self.backgroundColor = .secondarySystemBackground
         deliveryPartnerImage.layer.masksToBounds = true
         deliveryPartnerImage.layer.cornerRadius = deliveryPartnerImage.frame.height / 2
+        
         
         self.layer.cornerRadius = 20
         
