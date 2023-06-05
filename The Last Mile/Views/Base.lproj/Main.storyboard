@@ -181,7 +181,7 @@ Final Mile</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-ch-fXw">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-ch-fXw">
                                 <rect key="frame" x="20" y="243.33333333333337" width="181" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IFH-8a-o0P"/>
@@ -189,7 +189,7 @@ Final Mile</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJR-iH-EK2">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJR-iH-EK2">
                                 <rect key="frame" x="20" y="298.33333333333331" width="181" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ju7-eV-Vhy"/>
@@ -197,7 +197,7 @@ Final Mile</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa1-Uo-RMJ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa1-Uo-RMJ">
                                 <rect key="frame" x="71" y="368.33333333333331" width="78" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cum-mf-4rw"/>
@@ -209,9 +209,8 @@ Final Mile</string>
                                     <action selector="login:" destination="TRE-x0-xHk" eventType="touchUpInside" id="X3R-S8-agg"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-0b-FMX">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHj-0b-FMX">
                                 <rect key="frame" x="-3" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
                                     <navigationItem id="uDh-42-7HN"/>
@@ -223,11 +222,11 @@ Final Mile</string>
                         <constraints>
                             <constraint firstItem="pJa-7H-HBA" firstAttribute="trailing" secondItem="OJR-iH-EK2" secondAttribute="trailing" constant="20" id="5YB-Cy-hXI"/>
                             <constraint firstItem="Wa1-Uo-RMJ" firstAttribute="top" secondItem="OJR-iH-EK2" secondAttribute="bottom" constant="30" id="BKV-Gs-CfT"/>
+                            <constraint firstItem="4xW-uf-XLn" firstAttribute="top" secondItem="NHj-0b-FMX" secondAttribute="bottom" constant="100" id="E5C-4g-9gZ"/>
                             <constraint firstItem="OJR-iH-EK2" firstAttribute="top" secondItem="MVn-ch-fXw" secondAttribute="bottom" constant="15" id="FmK-R6-w68"/>
                             <constraint firstItem="pJa-7H-HBA" firstAttribute="trailing" secondItem="4xW-uf-XLn" secondAttribute="trailing" constant="16" id="JU0-J3-i2u"/>
                             <constraint firstItem="4xW-uf-XLn" firstAttribute="leading" secondItem="pJa-7H-HBA" secondAttribute="leading" constant="16" id="Jok-wr-cpw"/>
                             <constraint firstItem="OJR-iH-EK2" firstAttribute="leading" secondItem="pJa-7H-HBA" secondAttribute="leading" constant="20" id="L2u-0Q-wfa"/>
-                            <constraint firstItem="4xW-uf-XLn" firstAttribute="top" secondItem="pJa-7H-HBA" secondAttribute="top" constant="100" id="LMb-Rc-fDM"/>
                             <constraint firstItem="pJa-7H-HBA" firstAttribute="trailing" secondItem="Wa1-Uo-RMJ" secondAttribute="trailing" constant="72" id="WhL-a5-Inz"/>
                             <constraint firstItem="Wa1-Uo-RMJ" firstAttribute="leading" secondItem="pJa-7H-HBA" secondAttribute="leading" constant="71" id="bAk-vg-hWC"/>
                             <constraint firstItem="MVn-ch-fXw" firstAttribute="leading" secondItem="pJa-7H-HBA" secondAttribute="leading" constant="20" id="c0z-8z-kv8"/>
